@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 test for w
+=======
+test for w
+test for everyone
+>>>>>>> 643be49b074c1a631cde6e3f6d51b80e62215e0d
