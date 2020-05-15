@@ -1,7 +1,7 @@
 ﻿//寫一個回傳1+1=2的字串方法
 
 function a([]) {
-   
+    let d = [1, 2, 3];
     return [].length;
 
 }
