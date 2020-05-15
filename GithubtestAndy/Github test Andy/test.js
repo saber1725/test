@@ -5,5 +5,6 @@ function a([]) {
     return [].length;
 
 }
-let b=[1,2,3]
+let b = [1, 2, 3]; /*覆蓋測試2*/
+let c = [7, 8, 9];
 document.querySelector("h1").innerHTML = a(b);
