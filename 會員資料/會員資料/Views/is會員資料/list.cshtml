@@ -1,0 +1,45 @@
+﻿@using 會員資料.Models
+@{
+    ViewBag.Title = "list";
+}
+
+<h2>會員清單</h2>
+<a href="~/is會員資料/New">新增會員</a>
+<table border="1">
+    <tr>
+        <td>序號</td>
+        <td>ID</td>
+        <td>姓名</td>
+        <td>暱稱</td>
+        <td>性別</td>
+        <td>連絡電話</td>
+        <td>Email</td>
+        <td>密碼</td>
+        <td>聯絡地址</td>
+        <td>身分證照片</td>
+        <td>會員權限等級</td>
+    </tr>
+
+    @{ 
+        int count = 1;
+        foreach(cis會員資料 c in Model)
+        {
+            <tr>
+                    <td>@count.ToString()</td>
+                <td>@c.is會員資料ID</td>
+                <td>@c.is會員資料姓名</td>
+                <td>@c.is會員資料暱稱</td>
+                <td>@c.is會員資料性別</td>
+                <td>@c.is會員資料連絡電話</td>
+                <td>@c.is會員資料Email</td>
+                <td>@c.is會員資料密碼</td>
+                <td>@c.is會員資料聯絡地址</td>
+                <td>@c.is會員資料身分證照片</td>
+                <td>@c.is會員資料會員權限等級</td>
+            </tr>
+            count++;
+        }
+    }
+
+</table>
+
