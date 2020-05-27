@@ -1,0 +1,49 @@
+﻿nav {
+    padding-bottom: 30px;
+    /*border: 3px solid black;*/
+    position: relative;
+}
+
+.logo {    
+    z-index:10;
+    position: absolute;
+    width: 200px;
+    /*border: 3px solid #9999CC;*/
+    right: 25px;
+    Top: 5px;
+    float:right;
+    padding-left:20px;
+}
+
+.menu {
+    width: 100%;
+    overflow: auto;
+    background-color: white;
+    border-radius: 2px;
+    list-style-type: none;
+}
+
+    .menu li {
+        position:relative;
+        width: 7em;
+        line-height: 4em;
+        float: left;
+    }
+
+        .menu li a {
+            display: block;
+            text-align: center;
+            color: black;
+        }
+
+            .menu li a:link {
+                text-decoration: none;
+                color: black
+            }
+
+            .menu li a:hover {
+                background-color: gray;
+                color: white;
+                border-radius: 100px;
+                transition:1s;
+            }
