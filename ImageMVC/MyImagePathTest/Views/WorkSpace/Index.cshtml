@@ -1,0 +1,27 @@
+﻿@model 期末專題_圖片平台.Models.CWorkSpace[]
+@using 期末專題_圖片平台.Models
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<a href="~/WorkSpace/w新增作品">新增作品</a>
+<div id="container">
+    @{
+        foreach (CWorkSpace w in Model)
+        {
+            <div id="mywork:@w.編號" >
+                <img src="@Url.Content(w.圖片路徑)" title="@w.圖片名稱" />
+                <p><span>分類: @w.分類 </span><span> 作者:@w.姓名</span></p>
+                <p>作品名稱: @w.作品名稱</p><p>作品描述: @w.作品描述</p>
+                <table>
+                    <tr>
+                        <td>@Html.ActionLink("修改", "w修改作品資料", "WorkSpace", new { id = w.編號 }, null)</td>
+                        <td>@Html.ActionLink("刪除", "w刪除作品", "WorkSpace", new { id = w.編號 }, new { onclick = "return confirm('確定要刪除嗎?')" })</td>
+                    </tr>
+                </table>
+            </div>
+        }
+    }
+</div>
+
