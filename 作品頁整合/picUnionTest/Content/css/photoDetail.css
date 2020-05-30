@@ -1,0 +1,81 @@
+﻿@import url('font-family.css');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.all {
+    margin: auto;
+}
+
+
+div
+{
+    margin:10px;
+}
+
+.cblabel label
+{
+    font-size:small
+}
+
+h3 {
+    text-align: center;
+}
+
+.picin {
+    /*border: 1px solid black;*/
+    width: 300px;
+    height: 430px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+figure {
+    width: 330px;
+    height: 700px;
+    border: 10px double gray;
+    margin-right: 100px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: lightgray
+}
+
+img {
+    width: 300px;
+    padding: 15px;
+    transition: 1.2s;
+}
+
+    img:hover {
+        width: 310px;
+        padding: 15px;
+        background-color: gray;
+        transition: 1.2s;
+        opacity: 0.5;
+    }
+    
+figcaption {
+    text-align: center;
+}
+
+.des
+{
+    position:relative;
+    top:100px;
+}
+.btn {
+    float: none;
+    text-align:center;
+}
+
+input {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

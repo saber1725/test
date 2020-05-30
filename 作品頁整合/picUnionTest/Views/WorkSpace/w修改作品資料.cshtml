@@ -1,0 +1,71 @@
+﻿@model 期末專題_圖片平台.Models.CWorkSpace
+@{
+    ViewBag.Title = "w修改作品資料";
+}
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>修改作品資料</title>
+    <link href="~/Content/css/Basic.css" rel="stylesheet" />
+    <link href="~/Content/css/photoDetail.css" rel="stylesheet" />
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data">
+        <figure class="all">
+            <h3>作品編輯</h3><br />
+            <figcaption>預覽</figcaption>
+            <img id="show_img" src="~/Upload_image/@Model.圖片名稱" alt="選擇的圖片" />
+            <br />
+            <input id="upload_img" type="file" name="圖片檔案" required />
+            <hr /><br />
+            <label>作品名稱:</label>
+            <br /><input type="text" name="作品名稱" value="@Model.作品名稱"/>
+            <div>
+                <label>作品描述:</label>
+                <br />
+                <textarea name="作品描述" cols="50" rows="5" style="resize:none" >@Model.作品描述</textarea>
+            </div>
+            <div>
+                <label>作品類別:</label>
+                <br /><input id="txtCate" type="text" name="分類" value="@Model.分類" />
+            </div>
+            <div>
+                <input id="txtCheckBoxCate" type="hidden" name="勾選項目分類" value="@Model.勾選項目分類" />
+            </div>
+            <div class="cblabel">
+                <input type="checkbox" class="txtinput" value="lotus" />
+                <label>lotus</label>
+                <input type="checkbox" class="txtinput" value="Ink" />
+                <label>Ink</label>
+                <input type="checkbox" class="txtinput" value="flowerminimalist" />
+                <label>flowerminimalist</label>
+
+                <input type="checkbox" class="txtinput" value="tattoohalf" />
+                <label>tattoohalf</label>
+                <input type="checkbox" class="txtinput" value="sleeve" />
+                <label>sleeve</label>
+                <input type="checkbox" class="txtinput" value="mandala" />
+                <label>mandala</label>
+
+                <input type="checkbox" class="txtinput" value="wrist" />
+                <label>wrist</label>
+                <input type="checkbox" class="txtinput" value="arm" />
+                <label>arm</label>
+
+            </div>
+
+            <div class="btn">
+                <input type="submit" id="btnSubmit2" value="修改" onclick="categoryCheckBox()" />
+            </div>
+        </figure>
+    </form>
+</body>
+</html>
+<div>
+    @Html.ActionLink("回上一頁", "Index")
+</div>
+<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+<script src="~/Scripts/jsFunction/imagePreview.js"></script>
+<script src="~/Scripts/jsFunction/categoryCheckBox_wModify.js"></script>
+<script src="~/Scripts/jsFunction/categoryCheckBox.js"></script>
