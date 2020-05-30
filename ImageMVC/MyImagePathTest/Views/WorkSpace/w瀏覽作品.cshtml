@@ -1,0 +1,42 @@
+﻿@model 期末專題_圖片平台.Models.CWorkSpace[]
+@using 期末專題_圖片平台.Models
+
+@{
+    ViewBag.Title = "w瀏覽作品";
+}
+<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+<script src="~/Scripts/masonry.pkgd.min.js"></script>
+<style>
+    .item{
+        width:220px;
+        margin:10px;
+        float:left;
+    }
+    .item img{
+        width:400px;
+
+    }
+</style>
+<h2>瀏覽作品</h2>
+<div> <input type="text" id="search" name="search" /><span>@Html.ActionLink("搜尋", "w搜尋作品", "WorkSpace",new { keyword ="x" },new { @Class = "link" })</span></div>@*set actionlink htmlattribute==>class*@
+<div id="container">
+    @{ 
+        foreach (CWorkSpace w in Model)
+        {
+            <div class="item">
+                <img src="@Url.Content(w.圖片路徑)" title="@w.圖片名稱"/>
+                <p>作品描述: @w.作品描述</p>
+                <span> 分類: @w.分類 </span><span> 作者: @w.姓名</span>
+            </div>
+            }
+    }
+</div>
+<script>
+    /*jQuery replace keyword value by input value*/
+    $(function(){
+        $(".link").click(function(){
+            var txtValue =$("#search").val();
+            this.href =this.href.replace("x",txtValue);
+        });
+    });
+</script>

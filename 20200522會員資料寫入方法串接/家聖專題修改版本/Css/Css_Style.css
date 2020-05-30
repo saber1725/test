@@ -1,0 +1,152 @@
+﻿.head1 {
+    display: flex;
+}
+.dv1 {
+    width: 600px;
+    height:100px;  
+}
+.lab {
+    width: 100px;      
+    text-align: center;
+}
+textarea {
+    resize: none; 
+}
+.dvv {
+    width:500px;
+    height:350px;   
+    margin: 10px auto;
+}
+.sp1 {
+    font-size: 18px;
+    color: red;
+}
+.div2 {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #FF5151;
+    width: 500px;
+    height: 50px;
+    cursor: pointer;
+}
+.spn1{
+    color:red;
+}
+.div3 {
+    width:100px;   
+    border-left: 2px solid red;
+    font-family: 微軟正黑體;
+    padding-left: 15px;
+    margin-left:550px;
+    margin-top:50px;
+    font-size:20px;
+}
+.Bothall {
+    background-color: #FCFCFC;
+    border: 1px solid #E0E0E0;
+    width: 800px;
+    height: 850px;
+    margin: 5px auto;
+    font-family: 微軟正黑體;
+}
+.Title1 {   
+    border-bottom: 2px solid #E0E0E0;
+}
+.p1 {
+    font-size: 30px;
+    text-align: center;  
+}
+.p2 {
+    text-align: center;
+}
+.span1{
+    width:200px;
+    border-bottom:1px solid grey;
+}
+.span2 {
+    width: 200px;
+    border-bottom: 1px solid grey;
+}
+.div4 {
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #3b5998;
+    width: 150px;
+    height: 50px;
+}
+.div5 {
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    width: 150px;
+    height: 50px;
+}
+.button1 {
+    position: relative;
+    width: 20%;
+    margin: 10px auto;
+}
+.button2{
+    position:absolute;
+    bottom:8px;
+    left:59px;    
+}
+.button3 {
+    position: relative;
+    width: 20%;
+    margin: 10px auto;
+}
+.underline1 {
+    display: flex;
+    width: 100%;
+   
+}
+.underline2 {
+    margin-left: 25px;
+    border-bottom: grey 2px solid;
+    width: 48%;
+}
+.font1 {
+    line-height: 12px;
+    width: 4%;
+    text-align: center;
+}
+.underline3 {
+    margin-right: 25px;
+    border-bottom: grey 2px solid;
+    width: 48%
+}
+.botton4 {
+    position: relative;
+    background-color: #FCFCFC;
+    border-top: 3px solid #E0E0E0;
+}
+.button5{
+    position:absolute;
+    left:270px;
+    top:10px;
+}
+.button6 {
+    position: absolute;
+    left:305px;
+    top:15px;
+}
+.a1 {
+    position: absolute;
+    left: 462px;
+    top: 15px;
+}
+.a2 {
+    position: absolute;
+    left: 275px;
+    top: 43px;
+}
+a {
+    text-decoration: none;
+}

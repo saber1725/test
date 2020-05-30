@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "w新增作品";
+}
+
+<h2>請填入作品資料</h2>
+<form method="post" enctype="multipart/form-data">
+    <p>
+        姓名:
+        <br /><input type="text" name="姓名" required/>
+    </p>
+    <p>
+        分類:
+        <br /><input type="text" name="分類" required/>
+    </p>
+    <p>
+        作品名稱:
+        <br /><input type="text" name="作品名稱" required/>
+    </p>
+    <p>
+        作品描述:
+        <br />
+        <textarea name="作品描述" cols="50" rows="5" style="resize:none" required></textarea>
+    </p>
+    <p>
+        圖片:
+        <input id="upload_img" type="file" name="圖片檔案" required/>
+        <br />
+        <img id="show_img" src="" alt="選擇的圖片" />
+
+    </p>
+    <p>
+        <input type="submit" value="送出" />
+    </p>
+</form>
+<div>
+    @Html.ActionLink("回上一頁", "Index")
+</div>
+<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+<script>
+    function previewImage(){
+        var fReader =new FileReader();
+        if(document.getElementById("upload_img").files[0]!=null){
+            var name =document.getElementById("upload_img").files[0].name;
+            fReader.readAsDataURL(document.getElementById("upload_img").files[0]);
+            //console.log(name)  //--選取圖片名稱
+            fReader.onload = function(fevent){
+                document.getElementById("show_img").src=fevent.target.result;
+            }
+            //console.log(document.getElementById("show_img").src)
+        }
+        else{
+                document.getElementById("show_img").src=""; //---choosefile {取消} 預覽為空
+        }
+    }
+    document.getElementById("upload_img").addEventListener("change",previewImage);
+</script>

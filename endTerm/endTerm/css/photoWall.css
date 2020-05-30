@@ -1,0 +1,48 @@
+﻿.outside {
+    position:absolute;
+    left:10px;
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    height:auto;
+}
+
+body {
+    /*width: 1399px;*/
+    height: auto;
+    /*overflow-x: hidden;*/
+}
+
+.a {
+    position: absolute;
+    /*border:1px solid black;*/
+    width: 1399px;
+    height: auto;
+    column-count: 5;
+    padding: 30px;
+    column-gap: 10px;
+}
+
+.b {
+    position: relative;
+    /*border: 1px solid black;*/
+    width: 230px;
+    margin-bottom: 50px;
+}
+
+img.c {
+    border: 1px solid black;
+    width: 230px;
+    z-index: 999;
+    /*padding:20px;*/
+}
+
+    img.c:hover {
+        background-color: black;
+        transition: 1.2s;
+        opacity: 0.5;
+        z-index: 999;
+        /*padding:0;*/
+    }
+   
