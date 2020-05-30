@@ -1,0 +1,47 @@
+﻿@model 期末專題_圖片平台.Models.CWorkSpace[]
+@using 期末專題_圖片平台.Models
+@{
+    ViewBag.Title = "wWorkPage";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>作品管理</title>
+    <link href="~/Content/css/Basic.css" rel="stylesheet" />
+    <link href="~/Content/css/artistphoto.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <figure class="all">
+        <h3>作品管理</h3>
+        <a href="~/WorkSpace/w新增作品">新增作品</a>
+        <input type="text" id="search" name="keyword" />
+        <div class="btn">
+            <span>@Html.ActionLink("搜尋", "w搜尋我的作品", "WorkSpace", new { keyword = "x" }, new { @Class = "link" })</span>@*set actionlink htmlattribute==>class*@
+        </div>
+        <div class="bt1" style="text-align:center;">
+            <a href="~/WorkSpace/w搜尋我的作品/?keyword=lotus"><span class="btn btn-outline-secondary" style="margin:0 3px 0 3px;">lotus</span></a>
+            <a href="~/WorkSpace/w搜尋我的作品/?keyword=flowerminimalist"><span class="btn btn-outline-secondary" style="margin:0 3px 0 3px;">flowerminimalist</span></a>
+            <a href="~/WorkSpace/w搜尋我的作品/?keyword=mandala"><span class="btn btn-outline-secondary" style="margin:0 3px 0 3px;">mandala</span></a>
+            <a href="~/WorkSpace/w搜尋我的作品/?keyword=wrist"><span class="btn btn-outline-secondary" style="margin:0 3px 0 3px;">wrist</span></a>
+            <a href="~/WorkSpace/w搜尋我的作品/?keyword=Watercolor"><span class="btn btn-outline-secondary" style="margin:0 3px 0 3px;">Watercolor</span></a>
+        </div>
+        <figcaption>作品預覽</figcaption>
+        <div id="container" class="pic">
+            @{
+                foreach (CWorkSpace w in Model)
+                {
+                    <div id="mywork:@w.編號" class="picin">
+                        <a href="~/WorkSpace/w修改作品資料/?id=@w.編號"><img src="@Url.Content(w.圖片路徑)" title="@w.圖片名稱" /></a>
+                    </div>
+                }
+            }
+        </div>
+    </figure>
+    <script src="~/Scripts/jquery-3.5.1.js"></script>
+    <script src="~/Scripts/jsFunction/search_replace.js"></script>
+</body>
+</html>
+

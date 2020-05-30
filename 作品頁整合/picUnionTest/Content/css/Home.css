@@ -1,0 +1,158 @@
+﻿/* ---- grid and grid-item ---- */
+
+* {
+    box-sizing: border-box;
+}
+
+.slimg {
+    width: 300px;
+    /*height: auto;*/
+} 
+.slimg:hover {
+    opacity:0.5;
+}
+
+/*btn*/
+
+/*button {
+    margin: 0 20px 0 20px;
+}*/
+
+.line {
+    border-top: 2px solid lightgray;
+    margin: 0 20px 0 20px;
+}
+
+.linetop{
+    border-top:10px solid lightgray;
+    margin:0 300px 0 300px ;
+}
+
+.linebot{
+    border-bottom: 10px solid lightgray;
+    margin: 0 300px 0 300px;
+}
+
+/*Slides*/
+ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.slides {
+    width: 2500px;
+    left: 0px;
+    transition: all 2.5s;
+}
+
+    ul.slides li {
+        width: 500px;
+        height: 600px;
+        overflow: hidden;
+        float: left;
+        /*display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;*/
+    }
+
+        ul.slides li img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        ul.slides li img:hover {
+            opacity:0.5;
+        }
+
+.dot {
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+    .dot li {
+        border: 1px solid #fff;
+        /* border-radius: 50%; */
+        margin: 0 5px;
+        width: 24px;
+        height: 10px;
+    }
+
+        .dot li:hover {
+            background: #fff;
+        }
+
+.slide_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    width: 30px;
+    color: #fff;
+    position: absolute;
+    font-size: 24px;
+}
+
+#prevSlide {
+    left: 0;
+}
+
+#nextSlide {
+    right: 0;
+}
+
+.slide_btn i {
+    color: rgba(255,255,255,.6); /*.6 transparent*/
+    transition: .5s;
+}
+
+.slide_btn:hover i {
+    color: rgba(255,255,255,1);
+}
+
+.wrapper {
+    position: relative;
+    width: 500px;
+    height: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.linefooter1 {
+    position: absolute;
+    float: left;
+    bottom:0;
+    left: 0;
+    width: 40%;
+    padding-top: 170px;
+    border-top: 2px solid lightgray;
+    opacity:0.3;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid black;
+    border-left: 70px solid lightgray;
+    width: 99%;
+    padding: 50px;
+    float: left;
+    background-color: lightgrey;
+    opacity: 0.7;
+    
+}
+
+.p {
+    opacity:1;
+}
